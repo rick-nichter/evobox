@@ -8,6 +8,12 @@ public class CreatorItem
 {
     public string name;
     public Sprite icon;
+
+    public CreatorItem(string name, Sprite icon)
+    {
+        this.name = name;
+        this.icon = icon; 
+    }
 }
 public class CreatorContentBehavior : MonoBehaviour
 {
@@ -21,16 +27,22 @@ public class CreatorContentBehavior : MonoBehaviour
         AddButtons();
     }
 
-    private void AddButtons()
+    public void AddButtons()
     {
         foreach (CreatorItem item in itemList)
         {
-            GameObject newButton = objectPool.GetObject();
-            newButton.transform.SetParent(contentPanel, false);
-
-            CreatorButtonBehavior creatorButton = newButton.GetComponent<CreatorButtonBehavior>();
-            creatorButton.Setup(item, this);
+            DrawButton(item);
         }
+    }
+
+    private void DrawButton(CreatorItem item)
+    {
+        
+        GameObject newButton = objectPool.GetObject();
+        newButton.transform.SetParent(contentPanel, false);
+
+        CreatorButtonBehavior creatorButton = newButton.GetComponent<CreatorButtonBehavior>();
+        creatorButton.Setup(item, this);
     }
 
     private void RemoveButtons()
@@ -42,12 +54,14 @@ public class CreatorContentBehavior : MonoBehaviour
         }
     }
 
-    private void AddItem(CreatorItem item)
+    public void AddItem(CreatorItem item)
     {
         itemList.Add(item);
+        DrawButton(item);
+
     }
 
-    private void RemoveItem(CreatorItem item)
+    public void RemoveItem(CreatorItem item)
     {
         itemList.Remove(item);
     }
