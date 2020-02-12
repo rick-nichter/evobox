@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/Assets/Plugins
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -64,6 +65,8 @@ crashlytics-build.properties
 
 
 # Common IntelliJ Platform excludes
+
+*/.idea/*
 
 # User specific
 **/.idea/**/workspace.xml
