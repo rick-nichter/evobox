@@ -44,27 +44,10 @@ public class GameManagerScript : MonoBehaviour
         switch (newState)
         {
             case GameState.Place:
-                // Destroy any existing placement preview
-                if (placingObjectPreview)
-                {
-                    Destroy(placingObjectPreview);
-                }
-
+                // Set the object to be placed to the desired prefab
                 placingObject = objectToPlace;
-                placingObjectPreview = Instantiate<GameObject>(objectToPlace, 
-                    mainCamera.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 5)), Quaternion.Euler(0, 0, 0));
-
-                // remove behavior from this species so it is essentially just a model
-                Destroy(placingObjectPreview.GetComponent<MonoBehaviour>());
-                Destroy(placingObjectPreview.GetComponent<Collider>());
-
-                // now make a new material that is slightly transparent and apply it to the species object
-                Renderer r = placingObjectPreview.GetComponent<Renderer>();
-                Color newColor = r.material.color;
-                newColor.a = .5f;
-                r.material.color = newColor;
-                // remove shadows from preview
-                r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                // Create a preview version of the desired prefab
+                CreateObjectPreview(objectToPlace);
 
                 break;
         }
@@ -91,5 +74,37 @@ public class GameManagerScript : MonoBehaviour
                 SetState(GameState.View);
             }
         }
+
+        // if user presses escape, revert to view mode
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Destroy(placingObjectPreview);
+            SetState(GameState.View);
+        }
+    }
+
+    private void CreateObjectPreview(GameObject objectToPreview)
+    {
+        // Destroy any existing placement preview
+        if (placingObjectPreview)
+        {
+            Destroy(placingObjectPreview);
+        }
+
+        // New instance of the object, placed in the center of the screen 
+        placingObjectPreview = Instantiate<GameObject>(objectToPreview,
+            mainCamera.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 5)), Quaternion.Euler(0, 0, 0));
+
+        // remove behavior from this species so it is essentially just a model
+        Destroy(placingObjectPreview.GetComponent<MonoBehaviour>());
+        Destroy(placingObjectPreview.GetComponent<Collider>());
+
+        // now make a new material that is slightly transparent and apply it to the species object
+        Renderer r = placingObjectPreview.GetComponent<Renderer>();
+        Color newColor = r.material.color;
+        newColor.a = .5f;
+        r.material.color = newColor;
+        // remove shadows from preview
+        r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
     }
 }
