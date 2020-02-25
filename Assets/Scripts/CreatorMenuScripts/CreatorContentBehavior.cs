@@ -8,16 +8,20 @@ public class CreatorItem
 {
     public string name;
     public Sprite icon;
+    public GameObject prefab;
 
-    public CreatorItem(string name, Sprite icon)
+    public CreatorItem(string name, Sprite icon, GameObject prefab)
     {
         this.name = name;
-        this.icon = icon; 
+        this.icon = icon;
+        this.prefab = prefab;
     }
 }
 public class CreatorContentBehavior : MonoBehaviour
 {
+    // The list of items to be displayed in this content pane
     public List<CreatorItem> itemList;
+    // The transform of the content panel this script belongs to
     public Transform contentPanel;
     public ObjectPool objectPool;
 

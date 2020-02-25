@@ -138,7 +138,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Name
 --- !u!1 &3347792990632236532
@@ -286,6 +286,7 @@ MonoBehaviour:
   button: {fileID: 3347792990632236538}
   nameText: {fileID: 3347792990523752413}
   iconImage: {fileID: 3347792990414001380}
+  gameManager: {fileID: 0}
 --- !u!114 &8777140514802877735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,10 +300,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 100
-  m_MinHeight: 100
-  m_PreferredWidth: 120
-  m_PreferredHeight: 120
+  m_MinWidth: 50
+  m_MinHeight: 50
+  m_PreferredWidth: 56
+  m_PreferredHeight: 56
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
