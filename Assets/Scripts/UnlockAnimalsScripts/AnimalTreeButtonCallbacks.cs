@@ -17,7 +17,7 @@ namespace UnlockAnimalsScripts
         public void onStagClicked()
         {
             //TODO: Put all of this in an check for if player has enough XP to unlock. 
-            ccb.AddItem(new CreatorItem("Stag", stagSprite));
+            ccb.AddItem(new CreatorItem("Stag", stagSprite, null)); // get reference to prefab
             
             // Once we unlock this animal type don't allow unlocking it again.
             stagButton.interactable = false; 
@@ -27,7 +27,7 @@ namespace UnlockAnimalsScripts
         public void onWolfClicked()
         {
             //TODO: Put all of this in an check for if player has enough XP to unlock. 
-            ccb.AddItem(new CreatorItem("Wolf", wolfSprite));
+            ccb.AddItem(new CreatorItem("Wolf", wolfSprite, null));
             
             // Once we unlock this animal type don't allow unlocking it again.
             wolfButton.interactable = false; 
