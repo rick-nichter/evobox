@@ -36,13 +36,5 @@ public class CreatorButtonBehavior : MonoBehaviour
         // whatever clicking this button should do
         gameManager.SetState(GameState.Place, item.prefab);
     }
-
-    // User enters Placement Mode, where a transparent species object will be displayed where they move their mouse
-    // until they click, thus placing the species at the desired location
-    private void PlaceSpecies()
-    {
-
-    }
-
     
 }
