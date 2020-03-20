@@ -61,9 +61,34 @@ public class GameManagerScript : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
+            
+            // Calculate the true bottom of the model with all renderers accounted for. 
+            
+            float adjustmentHeight = 0; 
+            Queue<Renderer> renderers = new Queue<Renderer>(); 
+            
+            if (placingObjectPreview.GetComponent<Renderer>())
+            {
+                renderers.Enqueue(placingObjectPreview.GetComponent<Renderer>()); 
+            }
+
+            foreach (var rend in  placingObjectPreview.GetComponentsInChildren<Renderer>())
+            {
+                renderers.Enqueue(rend);
+            }
+
+            if (renderers.Count > 0)
+            {
+                Bounds combinedBounds = renderers.Dequeue().bounds;
+                while (renderers.Count > 0)
+                {
+                    combinedBounds.Encapsulate(renderers.Dequeue().bounds);   
+                }
+                adjustmentHeight = combinedBounds.size.y / 2f;
+            }
+            
             // place the object on top of the collider, not halfway through it
-            float adjustmentHeight = placingObjectPreview.GetComponent<Renderer>().bounds.size.y / 2;
-            Vector3 placePoint = hit.point + new Vector3(0, adjustmentHeight, 0);
+            Vector3 placePoint = new Vector3(hit.point.x, adjustmentHeight, hit.point.z);
             placingObjectPreview.transform.position = placePoint;
 
             // The object should be spawned when the mouse is clicked, reverting to view mode
@@ -99,12 +124,24 @@ public class GameManagerScript : MonoBehaviour
         Destroy(placingObjectPreview.GetComponent<MonoBehaviour>());
         Destroy(placingObjectPreview.GetComponent<Collider>());
 
-        // now make a new material that is slightly transparent and apply it to the species object
-        Renderer r = placingObjectPreview.GetComponent<Renderer>();
-        Color newColor = r.material.color;
-        newColor.a = .5f;
-        r.material.color = newColor;
-        // remove shadows from preview
-        r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        // TODO: The current models don't go transparent, even in the editor.  Figure out why this is. 
+        if (placingObjectPreview.GetComponent<Renderer>())
+        {
+            Renderer r = placingObjectPreview.GetComponent<Renderer>(); 
+            // now make a new material that is slightly transparent and apply it to the species object
+            Color newColor = r.material.color;
+            newColor.a = .3f;
+            r.material.color = newColor;
+            // remove shadows from preview
+            r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        }
+        foreach (Renderer r in placingObjectPreview.GetComponentsInChildren<Renderer>())
+        {
+            Color newColor = r.material.color;
+            newColor.a = .3f;
+            r.material.color = newColor;
+            // remove shadows from preview
+            r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        }
     }
 }
