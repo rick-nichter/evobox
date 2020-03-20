@@ -72,7 +72,7 @@ public class GameManagerScript : MonoBehaviour
                 renderers.Enqueue(placingObjectPreview.GetComponent<Renderer>()); 
             }
 
-            foreach (var rend in  placingObjectPreview.GetComponentsInChildren<Renderer>())
+            foreach (var rend in placingObjectPreview.GetComponentsInChildren<Renderer>())
             {
                 renderers.Enqueue(rend);
             }
@@ -123,23 +123,33 @@ public class GameManagerScript : MonoBehaviour
         // remove behavior from this species so it is essentially just a model
         Destroy(placingObjectPreview.GetComponent<MonoBehaviour>());
         Destroy(placingObjectPreview.GetComponent<Collider>());
+        Destroy(placingObjectPreview.GetComponent<Rigidbody>());
 
         // TODO: The current models don't go transparent, even in the editor.  Figure out why this is. 
         if (placingObjectPreview.GetComponent<Renderer>())
         {
             Renderer r = placingObjectPreview.GetComponent<Renderer>(); 
-            // now make a new material that is slightly transparent and apply it to the species object
-            Color newColor = r.material.color;
-            newColor.a = .3f;
-            r.material.color = newColor;
+            // now make a new color that is slightly transparent and apply it to each of the renderer's materials
+            foreach (Material m in r.materials)
+            {
+                Color newColor = m.color;
+                newColor.a = .3f;
+                m.color = newColor;
+            }
+            
             // remove shadows from preview
             r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         }
         foreach (Renderer r in placingObjectPreview.GetComponentsInChildren<Renderer>())
         {
-            Color newColor = r.material.color;
-            newColor.a = .3f;
-            r.material.color = newColor;
+            // now make a new color that is slightly transparent and apply it to each of the renderer's materials
+            foreach (Material m in r.materials)
+            {
+                Color newColor = m.color;
+                newColor.a = .3f;
+                m.color = newColor;
+            }
+
             // remove shadows from preview
             r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         }
