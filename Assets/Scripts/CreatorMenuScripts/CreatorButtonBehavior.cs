@@ -8,12 +8,18 @@ public class CreatorButtonBehavior : MonoBehaviour
     public Button button;
     public Text nameText;
     public Image iconImage;
+    public GameManagerScript gameManager;
 
     private CreatorItem item;
     private CreatorContentBehavior creatorContent;
 
     void Start()
     {
+        if (!gameManager)
+        {
+            // Get the game manager (there should only be one present at any given time)
+            gameManager = FindObjectOfType<GameManagerScript>();
+        }
         button.onClick.AddListener(HandleClick);
     }
 
@@ -28,7 +34,14 @@ public class CreatorButtonBehavior : MonoBehaviour
     public void HandleClick()
     {
         // whatever clicking this button should do
-        Debug.Log("Button Clicked");
+        gameManager.SetState(GameState.Place, item.prefab);
+    }
+
+    // User enters Placement Mode, where a transparent species object will be displayed where they move their mouse
+    // until they click, thus placing the species at the desired location
+    private void PlaceSpecies()
+    {
+
     }
 
     

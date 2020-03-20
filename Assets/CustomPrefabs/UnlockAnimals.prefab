@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3626599979529281892
 RectTransform:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599979537435886}
   m_OnClick:
     m_PersistentCalls:
@@ -421,7 +421,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599979566628149}
   m_OnClick:
     m_PersistentCalls:
@@ -555,12 +555,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 4577329694319981769}
+        m_MethodName: onStagClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -679,7 +679,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599979617418253}
   m_OnClick:
     m_PersistentCalls:
@@ -962,7 +962,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599979679335917}
   m_OnClick:
     m_PersistentCalls:
@@ -1091,7 +1091,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599979694944795}
   m_OnClick:
     m_PersistentCalls:
@@ -1220,7 +1220,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599979703265479}
   m_OnClick:
     m_PersistentCalls:
@@ -1349,7 +1349,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599979789952320}
   m_OnClick:
     m_PersistentCalls:
@@ -1714,7 +1714,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599979979305808}
   m_OnClick:
     m_PersistentCalls:
@@ -2229,7 +2229,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599980181305541}
   m_OnClick:
     m_PersistentCalls:
@@ -2435,7 +2435,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599980245934927}
   m_OnClick:
     m_PersistentCalls:
@@ -2564,7 +2564,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599980381309511}
   m_OnClick:
     m_PersistentCalls:
@@ -2847,7 +2847,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599980466197959}
   m_OnClick:
     m_PersistentCalls:
@@ -3042,7 +3042,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599980507129727}
   m_OnClick:
     m_PersistentCalls:
@@ -3325,7 +3325,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599980579678834}
   m_OnClick:
     m_PersistentCalls:
@@ -3531,7 +3531,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599980615522682}
   m_OnClick:
     m_PersistentCalls:
@@ -3556,6 +3556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3626599980666297237}
+  - component: {fileID: 4577329694319981769}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -3586,6 +3587,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4577329694319981769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3626599980666297236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf3d0336e044f5abe8ae391eedc40f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ccb: {fileID: 0}
+  stagButton: {fileID: 3626599979592149901}
+  stagSprite: {fileID: 21300000, guid: fce01ab0cfb16e84ead7c3d64d310ff5, type: 3}
+  stagModel: {fileID: 4573818649365591629, guid: 7b3a2e88c613fbf46aac1b34a1589e17,
+    type: 3}
+  wolfButton: {fileID: 3626599980813404629}
+  wolfSprite: {fileID: 21300000, guid: 6f00425aeb5da2c44ba5092ec17e242e, type: 3}
+  wolfModel: {fileID: 7348728744447982129, guid: 8a72091d6f25f554181dfdf8f29cf59c,
+    type: 3}
 --- !u!1 &3626599980682592248
 GameObject:
   m_ObjectHideFlags: 0
@@ -3699,7 +3721,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599980682592251}
   m_OnClick:
     m_PersistentCalls:
@@ -4064,12 +4086,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 4577329694319981769}
+        m_MethodName: onWolfClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4265,7 +4287,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599980904274804}
   m_OnClick:
     m_PersistentCalls:
@@ -4544,7 +4566,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599981060371766}
   m_OnClick:
     m_PersistentCalls:
@@ -4904,7 +4926,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599981110095127}
   m_OnClick:
     m_PersistentCalls:
@@ -5046,7 +5068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3626599981197815276}
-  - component: {fileID: 3626599981197815277}
+  - component: {fileID: 8373060636113397960}
   m_Layer: 5
   m_Name: UnlockAnimals
   m_TagString: Untagged
@@ -5061,7 +5083,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3626599981197815275}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5075,7 +5097,7 @@ RectTransform:
   m_AnchoredPosition: {x: 216, y: 251.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3626599981197815277
+--- !u!114 &8373060636113397960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5084,10 +5106,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3626599981197815275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426e2d08ed13eed4ead3b16274818d2f, type: 3}
+  m_Script: {fileID: 11500000, guid: d0183e616a86b364bbc267ac07caa838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 3626599979529281891}
+  animalUnlockCanvas: {fileID: 3626599979529281891}
+  creatorMenu: {fileID: 0}
 --- !u!1 &3626599981315781024
 GameObject:
   m_ObjectHideFlags: 0
@@ -5435,7 +5458,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599981409949814}
   m_OnClick:
     m_PersistentCalls:
@@ -5641,7 +5664,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3626599981447364772}
   m_OnClick:
     m_PersistentCalls:
