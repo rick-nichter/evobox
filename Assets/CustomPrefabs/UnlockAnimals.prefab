@@ -3602,11 +3602,11 @@ MonoBehaviour:
   ccb: {fileID: 0}
   stagButton: {fileID: 3626599979592149901}
   stagSprite: {fileID: 21300000, guid: fce01ab0cfb16e84ead7c3d64d310ff5, type: 3}
-  stagModel: {fileID: 4573818649365591629, guid: 7b3a2e88c613fbf46aac1b34a1589e17,
+  stagModel: {fileID: 1192538035696932194, guid: e34ab58cf82391249bd88a601cf353bd,
     type: 3}
   wolfButton: {fileID: 3626599980813404629}
   wolfSprite: {fileID: 21300000, guid: 6f00425aeb5da2c44ba5092ec17e242e, type: 3}
-  wolfModel: {fileID: 7348728744447982129, guid: 8a72091d6f25f554181dfdf8f29cf59c,
+  wolfModel: {fileID: 5007431451399075747, guid: 4e78ca2a1a47318448a9675cf59965d7,
     type: 3}
 --- !u!1 &3626599980682592248
 GameObject:

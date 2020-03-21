@@ -21,6 +21,7 @@ public class AnimalBehavior : MonoBehaviour
         timeSinceDirectionChange = 0f;
         timeBetweenDirectionChange = 0f;
         roamDistance = 2f;
+        GetComponent<Rigidbody>().freezeRotation = true; 
     }
 
     private void FixedUpdate()
