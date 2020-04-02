@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Deer
   - Wolf
+  - Rabbit
   layers:
   - Default
   - TransparentFX
