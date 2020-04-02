@@ -88,7 +88,7 @@ public class GameManagerScript : MonoBehaviour
             }
             
             // place the object on top of the collider, not halfway through it
-            Vector3 placePoint = new Vector3(hit.point.x, adjustmentHeight, hit.point.z);
+            Vector3 placePoint = new Vector3(hit.point.x, adjustmentHeight + 1f, hit.point.z);
             placingObjectPreview.transform.position = placePoint;
 
             // The object should be spawned when the mouse is clicked, reverting to view mode

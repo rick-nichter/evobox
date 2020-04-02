@@ -11,8 +11,16 @@ public class PredatorBehavior : AnimalBehavior
     public float huntSpeed;
     private GameObject currentPrey;
 
+    private Hunger hunger;
+
+    private void Start()
+    {
+        hunger = GetComponent<Hunger>(); 
+    }
+
     private void FixedUpdate()
     {
+        Debug.Log(hunger.hungerPoints);
         Roam();
         Hunt();
     }
@@ -20,7 +28,8 @@ public class PredatorBehavior : AnimalBehavior
     // when prey is within a certain distance from a predator, it will hunt it
     public void Hunt()
     {
-        if (!currentPrey)
+        //Only hunt if the animal is hungry
+        if (!currentPrey && hunger.isHungry())
         {
             // check for prey in a certain radius
             Collider[] colliders = Physics.OverlapSphere(animalBody.position, huntRadius);
@@ -48,6 +57,7 @@ public class PredatorBehavior : AnimalBehavior
     {
         if (preyList.Contains(collision.gameObject.tag))
         {
+            hunger.Eat(); // Increments hunger points by 1 
             Destroy(collision.gameObject);
             currentPrey = null;
         }

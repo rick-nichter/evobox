@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 1332085062645907138}
   - component: {fileID: 2745647820322489634}
   - component: {fileID: 6473536235005914706}
+  - component: {fileID: 6886188138066263505}
   m_Layer: 0
   m_Name: WolfPrefab
   m_TagString: Wolf
@@ -380,6 +381,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6886188138066263505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2446210671387594538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ceee9dfbfa97449829b5fa4de7a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hungerPoints: 5
 --- !u!1 &2613893109032363413
 GameObject:
   m_ObjectHideFlags: 0
