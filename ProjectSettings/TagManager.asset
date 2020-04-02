@@ -7,6 +7,9 @@ TagManager:
   - Deer
   - Wolf
   - Rabbit
+  - Boundary
+  - Bush
+  - Plant
   layers:
   - Default
   - TransparentFX

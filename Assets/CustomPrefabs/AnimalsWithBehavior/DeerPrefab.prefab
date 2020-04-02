@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869491133131812135}
-  m_LocalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 2798959536760514417}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.98, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!33 &6431277616250000556
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -91,9 +91,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2798959536760514417}
-  - component: {fileID: 2403630294440543330}
   - component: {fileID: 6577764329405686998}
   - component: {fileID: 1322397683690508038}
+  - component: {fileID: -3795336773003059311}
   m_Layer: 0
   m_Name: DeerPrefab
   m_TagString: Deer
@@ -108,28 +108,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192538035696932194}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 5564077581964467268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2403630294440543330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192538035696932194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17acc00112cd430408979ef66d48e706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalBody: {fileID: 2798959536760514417}
-  maxSpeed: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &6577764329405686998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -141,8 +127,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.5, y: 5, z: 2}
-  m_Center: {x: -0.75, y: 0, z: 0}
+  m_Size: {x: 2, y: 5, z: 7.5}
+  m_Center: {x: 0, y: 0, z: -0.75}
 --- !u!54 &1322397683690508038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -159,3 +145,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3795336773003059311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192538035696932194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b805238c181fe340946ba63f604e11b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalBody: {fileID: 2798959536760514417}
+  maxSpeed: 0
+  foodList:
+  - Bush
+  searchRadius: 3
+  searchSpeed: 1
+  currentFood: {fileID: 0}
+  hungerPoints: 3
+  hunger: {fileID: 0}

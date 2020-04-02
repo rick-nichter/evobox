@@ -88,15 +88,28 @@ public class GameManagerScript : MonoBehaviour
             }
             
             // place the object on top of the collider, not halfway through it
-            Vector3 placePoint = new Vector3(hit.point.x, adjustmentHeight + 1f, hit.point.z);
+            if (!placingObject.GetComponent<PlantBehavior>())
+            {
+                adjustmentHeight += 1f;
+            }
+
+            Vector3 placePoint = new Vector3(hit.point.x, adjustmentHeight, hit.point.z);
             placingObjectPreview.transform.position = placePoint;
 
             // The object should be spawned when the mouse is clicked, reverting to view mode
             if (Input.GetMouseButton(0))
             {
-                Destroy(placingObjectPreview);
-                Instantiate<GameObject>(placingObject, placePoint, Quaternion.Euler(0, 0, 0));
-                SetState(GameState.View);
+                if (hit.collider.gameObject.CompareTag("Boundary"))
+                {
+                    // TODO: Need to alert player this is an unplaceable location
+                    Debug.Log("Cannot place on a map boundary!");
+                }
+                else
+                {
+                    Destroy(placingObjectPreview);
+                    Instantiate<GameObject>(placingObject, placePoint, Quaternion.Euler(0, 0, 0));
+                    SetState(GameState.View);
+                }
             }
         }
 
