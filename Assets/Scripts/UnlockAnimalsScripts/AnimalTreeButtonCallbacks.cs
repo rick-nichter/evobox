@@ -13,7 +13,15 @@ namespace UnlockAnimalsScripts
 
         public Button wolfButton;
         public Sprite wolfSprite;
-        public GameObject wolfModel; 
+        public GameObject wolfModel;
+
+        public Button rabbitButton;
+        public Sprite rabbitSprite;
+        public GameObject rabbitModel;
+
+        public Button blackBearButton;
+        public Sprite blackBearSprite;
+        public GameObject blackBearModel;
         
         // Called on Button Click
         public void onStagClicked()
@@ -33,6 +41,18 @@ namespace UnlockAnimalsScripts
             
             // Once we unlock this animal type don't allow unlocking it again.
             wolfButton.interactable = false; 
+        }
+
+        public void onRabbitClicked()
+        {
+            ccb.AddItem(new CreatorItem("Rabbit", rabbitSprite, rabbitModel));
+            rabbitButton.interactable = false; 
+        }
+
+        public void onBlackBearClicked()
+        {
+            ccb.AddItem(new CreatorItem("Black Bear", blackBearSprite, blackBearModel));
+            blackBearButton.interactable = false; 
         }
     }
 }

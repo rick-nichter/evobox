@@ -596,6 +596,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3626599980181305540, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626599980181305540, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 548283688}
+    - target: {fileID: 3626599980181305540, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onRabbitClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626599980181305540, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626599980783097330, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_Text
+      value: Black Bear
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626599981110095124, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_Name
+      value: Black Bear Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626599981110095125, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626599981110095126, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626599981110095126, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 548283688}
+    - target: {fileID: 3626599981110095126, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onBlackBearClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626599981110095126, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3626599981197815275, guid: 6f4e59064e5d49349ac452a2f91dd94d,
         type: 3}
       propertyPath: m_Name
@@ -716,6 +771,40 @@ PrefabInstance:
       propertyPath: wolfModel
       value: 
       objectReference: {fileID: 2446210671387594538, guid: bb5ae20446d20f7409dcb63846264197,
+        type: 3}
+    - target: {fileID: 4577329694319981769, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: rabbitSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 82aad794526da4f418ec3bae3fa862dd,
+        type: 3}
+    - target: {fileID: 4577329694319981769, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: rabbitButton
+      value: 
+      objectReference: {fileID: 1923905672}
+    - target: {fileID: 4577329694319981769, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: rabbitModel
+      value: 
+      objectReference: {fileID: 3322498955653045624, guid: ad7dede5b351e3a468de3a051698e3a4,
+        type: 3}
+    - target: {fileID: 4577329694319981769, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: blackBearSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59b016df5b866214a8ced3f6237fb152,
+        type: 3}
+    - target: {fileID: 4577329694319981769, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: blackBearButton
+      value: 
+      objectReference: {fileID: 1080158123}
+    - target: {fileID: 4577329694319981769, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+        type: 3}
+      propertyPath: blackBearModel
+      value: 
+      objectReference: {fileID: 1076747550847169535, guid: 2e49e2474dbc2064e9ee216876269078,
         type: 3}
     - target: {fileID: 8373060636113397960, guid: 6f4e59064e5d49349ac452a2f91dd94d,
         type: 3}
@@ -1498,6 +1587,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.9999986, y: 2.1574518e-15, z: 3}
   m_Center: {x: -1.4999981, y: 2.260825e-15, z: -1.5000012}
+--- !u!114 &548283688 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4577329694319981769, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+    type: 3}
+  m_PrefabInstance: {fileID: 206196799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf3d0336e044f5abe8ae391eedc40f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &549659363 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 155290, guid: 4562fbe7885fe2b4ba7e925d7f9e0ad1,
@@ -2936,6 +3037,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67591d5c46592134abc0500512ba9123, type: 3}
+--- !u!114 &1080158123 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3626599981110095126, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+    type: 3}
+  m_PrefabInstance: {fileID: 206196799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1106876496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3814,7 +3927,7 @@ PrefabInstance:
     - target: {fileID: 7029527891732781606, guid: c0b25ff1ed985794e98b348bdaa5fc25,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
+      value: 0.000022888184
       objectReference: {fileID: 0}
     - target: {fileID: 7029527891732781607, guid: c0b25ff1ed985794e98b348bdaa5fc25,
         type: 3}
@@ -5418,6 +5531,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9051708, y: 0.1776944, z: 1.7184765}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1923905672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3626599980181305540, guid: 6f4e59064e5d49349ac452a2f91dd94d,
+    type: 3}
+  m_PrefabInstance: {fileID: 206196799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1943781048 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 146614, guid: 9154d83fdcda70f4f84028ccd30286a2,
