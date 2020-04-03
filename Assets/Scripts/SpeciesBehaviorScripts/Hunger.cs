@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Hunger : MonoBehaviour
 {
-
     public int hungerPoints = 10;
 
-    private int maxHungerPoints; 
+    private int maxHungerPoints;
     void Start()
     {
         maxHungerPoints = hungerPoints; 
@@ -21,10 +20,13 @@ public class Hunger : MonoBehaviour
         // If hunger points is less than or equal to zero the animal dies
         if (hungerPoints > 0)
         {
+            /*
             if (Random.Range(0, 10) == 5)
             {
                 hungerPoints--;
             }
+            */
+            hungerPoints--;
         }
         else
         {
