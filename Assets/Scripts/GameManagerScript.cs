@@ -15,6 +15,7 @@ public enum GameState
 public class GameManagerScript : MonoBehaviour
 {
     public Camera mainCamera;
+    public ScoreHandler scoreScript;
 
     private GameState state = GameState.View;
     // a prefab of an object to be placed, if in Place GameState
@@ -27,6 +28,7 @@ public class GameManagerScript : MonoBehaviour
         {
             mainCamera = Camera.main;
         }
+        scoreScript = GameObject.FindWithTag("UpperRightUI").GetComponent<ScoreHandler>();
     }
 
     void Update()
@@ -35,6 +37,8 @@ public class GameManagerScript : MonoBehaviour
         {
             Placing();
         }
+
+        
     }
 
     public void SetState(GameState newState, GameObject objectToPlace = null)
@@ -61,15 +65,15 @@ public class GameManagerScript : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            
+
             // Calculate the true bottom of the model with all renderers accounted for. 
-            
-            float adjustmentHeight = 0; 
-            Queue<Renderer> renderers = new Queue<Renderer>(); 
-            
+
+            float adjustmentHeight = 0;
+            Queue<Renderer> renderers = new Queue<Renderer>();
+
             if (placingObjectPreview.GetComponent<Renderer>())
             {
-                renderers.Enqueue(placingObjectPreview.GetComponent<Renderer>()); 
+                renderers.Enqueue(placingObjectPreview.GetComponent<Renderer>());
             }
 
             foreach (var rend in placingObjectPreview.GetComponentsInChildren<Renderer>())
@@ -82,11 +86,12 @@ public class GameManagerScript : MonoBehaviour
                 Bounds combinedBounds = renderers.Dequeue().bounds;
                 while (renderers.Count > 0)
                 {
-                    combinedBounds.Encapsulate(renderers.Dequeue().bounds);   
+                    combinedBounds.Encapsulate(renderers.Dequeue().bounds);
                 }
+
                 adjustmentHeight = combinedBounds.size.y / 2f;
             }
-            
+
             // place the object on top of the collider, not halfway through it
             if (!placingObject.GetComponent<PlantBehavior>())
             {
@@ -109,15 +114,22 @@ public class GameManagerScript : MonoBehaviour
                     Destroy(placingObjectPreview);
                     Instantiate<GameObject>(placingObject, placePoint, Quaternion.Euler(0, 0, 0));
                     SetState(GameState.View);
+                    Destroy(placingObjectPreview);
+                    Instantiate<GameObject>(placingObject, placePoint, Quaternion.Euler(0, 0, 0));
+                    SetState(GameState.View);
+                    if (scoreScript.animalScoreValues.ContainsKey(placingObject.tag))
+                    {
+                        scoreScript.changeScore((int) scoreScript.animalScoreValues[placingObject.tag]);
+                    }
                 }
             }
-        }
 
-        // if user presses escape, revert to view mode
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Destroy(placingObjectPreview);
-            SetState(GameState.View);
+            // if user presses escape, revert to view mode
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Destroy(placingObjectPreview);
+                SetState(GameState.View);
+            }
         }
     }
 
