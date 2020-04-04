@@ -88,9 +88,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1747602171984654187}
-  - component: {fileID: 5794288806782030685}
   - component: {fileID: -5157676327400993647}
   - component: {fileID: -3045811564275211192}
+  - component: {fileID: 1404576783521591749}
   m_Layer: 0
   m_Name: RabbitPrefab
   m_TagString: Rabbit
@@ -113,26 +113,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5794288806782030685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3322498955653045624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17acc00112cd430408979ef66d48e706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalBody: {fileID: 1747602171984654187}
-  maxSpeed: 0
-  foodList: []
-  searchRadius: 0
-  searchSpeed: 0
-  currentFood: {fileID: 0}
-  hungerPoints: 5
-  hunger: {fileID: 0}
 --- !u!54 &-5157676327400993647
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -162,6 +142,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.13, y: 8.11, z: 8.87}
   m_Center: {x: 0, y: 0, z: -0.25}
+--- !u!114 &1404576783521591749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3322498955653045624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b805238c181fe340946ba63f604e11b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalBody: {fileID: 0}
+  maxSpeed: 0
+  foodList:
+  - Bush
+  searchRadius: 2
+  searchSpeed: 1
+  currentFood: {fileID: 0}
+  hungerPoints: 3
+  hunger: {fileID: 0}
 --- !u!1 &3640687096969667901
 GameObject:
   m_ObjectHideFlags: 0

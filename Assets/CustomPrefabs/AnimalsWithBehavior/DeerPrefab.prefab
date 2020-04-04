@@ -164,5 +164,5 @@ MonoBehaviour:
   searchRadius: 3
   searchSpeed: 1
   currentFood: {fileID: 0}
-  hungerPoints: 3
+  hungerPoints: 4
   hunger: {fileID: 0}

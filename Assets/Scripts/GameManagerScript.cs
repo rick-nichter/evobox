@@ -114,9 +114,6 @@ public class GameManagerScript : MonoBehaviour
                     Destroy(placingObjectPreview);
                     Instantiate<GameObject>(placingObject, placePoint, Quaternion.Euler(0, 0, 0));
                     SetState(GameState.View);
-                    Destroy(placingObjectPreview);
-                    Instantiate<GameObject>(placingObject, placePoint, Quaternion.Euler(0, 0, 0));
-                    SetState(GameState.View);
                     if (scoreScript.animalScoreValues.ContainsKey(placingObject.tag))
                     {
                         scoreScript.changeScore((int) scoreScript.animalScoreValues[placingObject.tag]);
