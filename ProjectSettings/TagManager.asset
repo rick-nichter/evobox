@@ -10,6 +10,7 @@ TagManager:
   - Boundary
   - Bush
   - Plant
+  - UpperRightUI
   layers:
   - Default
   - TransparentFX
