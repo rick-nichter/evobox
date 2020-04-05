@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 615562370656060157}
   m_Layer: 0
   m_Name: BlackBear
-  m_TagString: Untagged
+  m_TagString: Bear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b805238c181fe340946ba63f604e11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalBody: {fileID: 0}
+  animalBody: {fileID: 3941766332529787640}
   maxSpeed: 0
   foodList:
   - Bush

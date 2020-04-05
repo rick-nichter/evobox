@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b805238c181fe340946ba63f604e11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalBody: {fileID: 0}
+  animalBody: {fileID: 1747602171984654187}
   maxSpeed: 0
   foodList:
   - Bush

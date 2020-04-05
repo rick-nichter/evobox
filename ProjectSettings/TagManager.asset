@@ -11,6 +11,7 @@ TagManager:
   - Bush
   - Plant
   - UpperRightUI
+  - Bear
   layers:
   - Default
   - TransparentFX
