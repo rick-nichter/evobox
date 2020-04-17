@@ -8,13 +8,7 @@ public class AnimalCountUI : MonoBehaviour
     public int[] animalCounts;
     public string[] animalNames;
     public Text[] textObjects;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
 

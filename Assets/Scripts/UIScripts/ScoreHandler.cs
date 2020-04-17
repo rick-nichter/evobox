@@ -9,13 +9,14 @@ public class ScoreHandler : MonoBehaviour
     private int score;
     public Text scoreTextObject;
     public Hashtable animalScoreValues = new Hashtable();
-    // Start is called before the first frame update
     void Start()
     {
         score = 0;
         scoreTextObject.text = score.ToString();
         animalScoreValues.Add("Deer", 3);
         animalScoreValues.Add("Wolf", 5);
+        animalScoreValues.Add("Rabbit", 2);
+        animalScoreValues.Add("Bear", 5);
         InvokeRepeating("UpdateScore", 15, 30);
     }
 

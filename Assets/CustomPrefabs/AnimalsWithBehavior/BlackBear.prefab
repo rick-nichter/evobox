@@ -42,10 +42,10 @@ GameObject:
   - component: {fileID: 3941766332529787640}
   - component: {fileID: 6082282197701139382}
   - component: {fileID: 7155195261841710460}
-  - component: {fileID: 4630961913719609098}
+  - component: {fileID: 615562370656060157}
   m_Layer: 0
   m_Name: BlackBear
-  m_TagString: Untagged
+  m_TagString: Bear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4630961913719609098
+--- !u!114 &615562370656060157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,14 +103,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076747550847169535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17acc00112cd430408979ef66d48e706, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b805238c181fe340946ba63f604e11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animalBody: {fileID: 3941766332529787640}
   maxSpeed: 0
-  foodList: []
-  searchRadius: 0
-  searchSpeed: 0
+  foodList:
+  - Bush
+  searchRadius: 5
+  searchSpeed: 2
   currentFood: {fileID: 0}
   hungerPoints: 5
   hunger: {fileID: 0}

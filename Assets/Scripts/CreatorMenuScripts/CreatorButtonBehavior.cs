@@ -28,6 +28,7 @@ public class CreatorButtonBehavior : MonoBehaviour
         item = currentItem;
         nameText.text = item.name;
         iconImage.sprite = item.icon;
+        iconImage.preserveAspect = true;
         creatorContent = currentContent;
     }
 

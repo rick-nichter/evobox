@@ -311,7 +311,6 @@ GameObject:
   - component: {fileID: 1332085062645907138}
   - component: {fileID: 2745647820322489634}
   - component: {fileID: 6473536235005914706}
-  - component: {fileID: 7528793043377539634}
   m_Layer: 0
   m_Name: WolfPrefab
   m_TagString: Wolf
@@ -362,12 +361,12 @@ MonoBehaviour:
   animalBody: {fileID: 1036996823609619807}
   maxSpeed: 0
   foodList:
-  - '"Deer"'
-  searchRadius: 0
-  searchSpeed: 0
+  - Deer
+  searchRadius: 5
+  searchSpeed: 2
   currentFood: {fileID: 0}
-  hungerPoints: 0
-  hunger: {fileID: 7528793043377539634}
+  hungerPoints: 5
+  hunger: {fileID: 0}
 --- !u!54 &6473536235005914706
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -384,19 +383,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7528793043377539634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2446210671387594538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcbad873b5632eb449767529854488c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hungerPoints: 5
 --- !u!1 &2613893109032363413
 GameObject:
   m_ObjectHideFlags: 0

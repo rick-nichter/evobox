@@ -39,8 +39,6 @@ public class HerbivoreBehavior : AnimalBehavior
             {
                 // move toward the food
                 animalBody.LookAt(currentFood.transform);
-                Debug.Log(transform.position);
-                Debug.Log(currentFood.transform.position);
                 animalBody.position = Vector3.MoveTowards(animalBody.position, currentFood.transform.position, searchSpeed * Time.fixedDeltaTime);
             }
         }
