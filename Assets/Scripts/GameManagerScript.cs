@@ -28,7 +28,6 @@ public class GameManagerScript : MonoBehaviour
         {
             mainCamera = Camera.main;
         }
-        scoreScript = GameObject.FindWithTag("UpperRightUI").GetComponent<ScoreHandler>();
     }
 
     void Update()
