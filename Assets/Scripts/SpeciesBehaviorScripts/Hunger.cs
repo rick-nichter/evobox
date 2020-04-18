@@ -10,10 +10,12 @@ public class Hunger : MonoBehaviour
     
     
     private ScoreHandler scoreHandler;
+    private CoinHandler coinHandler;
 
     private void Awake()
     {
         scoreHandler = FindObjectOfType<ScoreHandler>();
+        coinHandler = FindObjectOfType<CoinHandler>();
     }
     
     void Start()
@@ -57,6 +59,9 @@ public class Hunger : MonoBehaviour
         {
             hungerPoints++;
         }
+        
+        // A reward for good game play -> providing food for your animals
+        coinHandler.updateCoins(2);
     }
 
     void Die()
