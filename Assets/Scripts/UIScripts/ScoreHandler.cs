@@ -24,6 +24,13 @@ public class ScoreHandler : MonoBehaviour
     public void changeScore(int deltaScore)
     {
       score += deltaScore;
+      
+      //don't allow negative score after score decrements on animal death
+      if (score < 0)
+      {
+          score = 0;
+      }
+      
       scoreTextObject.text = score.ToString();
     }
 

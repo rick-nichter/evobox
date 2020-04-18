@@ -10,8 +10,8 @@ TagManager:
   - Boundary
   - Bush
   - Plant
-  - UpperRightUI
   - Bear
+  - Score
   layers:
   - Default
   - TransparentFX

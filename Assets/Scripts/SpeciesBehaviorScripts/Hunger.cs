@@ -7,6 +7,15 @@ public class Hunger : MonoBehaviour
     public int hungerPoints = 10;
 
     private int maxHungerPoints;
+    
+    
+    private ScoreHandler scoreHandler;
+
+    private void Awake()
+    {
+        scoreHandler = FindObjectOfType<ScoreHandler>();
+    }
+    
     void Start()
     {
         maxHungerPoints = hungerPoints; 
@@ -54,6 +63,12 @@ public class Hunger : MonoBehaviour
     {
         //TODO Notify user of death in some way (Animation? Event Log?)
         Debug.Log(gameObject.name + " died of hunger");
+        
+        // Decrement score by 3X initial value because it isn't nice to let animals die of hunger. 
+        int animalWorth = (int)scoreHandler.animalScoreValues[gameObject.tag];
+        // Use negative 3 here because we += the param in ScoreHandler
+        scoreHandler.changeScore(animalWorth * -3);
+        
         Destroy(gameObject);
     }
 }

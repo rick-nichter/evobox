@@ -20,8 +20,19 @@ public class GameManagerScript : MonoBehaviour
     private GameState state = GameState.View;
     // a prefab of an object to be placed, if in Place GameState
     private GameObject placingObject;
+
+    private int cost = 0; 
+    
     // a preview instance of the object to be placed
     private GameObject placingObjectPreview;
+    
+    private CoinHandler coinHandler;
+
+    private void Awake()
+    {
+        coinHandler = FindObjectOfType<CoinHandler>(); 
+    }
+    
     void Start()
     {
         if (!mainCamera)
@@ -40,7 +51,7 @@ public class GameManagerScript : MonoBehaviour
         
     }
 
-    public void SetState(GameState newState, GameObject objectToPlace = null)
+    public void SetState(GameState newState, GameObject objectToPlace = null, int givenCost = 0)
     {
         state = newState;
 
@@ -49,6 +60,7 @@ public class GameManagerScript : MonoBehaviour
             case GameState.Place:
                 // Set the object to be placed to the desired prefab
                 placingObject = objectToPlace;
+                cost = givenCost;
                 // Create a preview version of the desired prefab
                 CreateObjectPreview(objectToPlace);
 
@@ -112,6 +124,10 @@ public class GameManagerScript : MonoBehaviour
                 {
                     Destroy(placingObjectPreview);
                     Instantiate<GameObject>(placingObject, placePoint, Quaternion.Euler(0, 0, 0));
+                    
+                    // Charge the user for buying an animal.  
+                    coinHandler.updateCoins(-1 * cost);
+                    
                     SetState(GameState.View);
                     if (scoreScript.animalScoreValues.ContainsKey(placingObject.tag))
                     {
