@@ -8,10 +8,20 @@ public class CreatorButtonBehavior : MonoBehaviour
     public Button button;
     public Text nameText;
     public Image iconImage;
+    public Text costText; 
     public GameManagerScript gameManager;
 
     private CreatorItem item;
     private CreatorContentBehavior creatorContent;
+
+    private int cost;
+
+    private CoinHandler coinHandler;
+
+    private void Awake()
+    {
+        coinHandler = FindObjectOfType<CoinHandler>(); 
+    }
 
     void Start()
     {
@@ -28,14 +38,23 @@ public class CreatorButtonBehavior : MonoBehaviour
         item = currentItem;
         nameText.text = item.name;
         iconImage.sprite = item.icon;
+        costText.text = item.cost.ToString();
         iconImage.preserveAspect = true;
         creatorContent = currentContent;
+        cost = item.cost; 
     }
 
     public void HandleClick()
     {
         // whatever clicking this button should do
-        gameManager.SetState(GameState.Place, item.prefab);
+        if (cost <= coinHandler.getCoins())
+        {
+            gameManager.SetState(GameState.Place, item.prefab, cost);
+        }
+        else
+        {
+            coinHandler.showTooExpensive(); 
+        }
     }
     
 }

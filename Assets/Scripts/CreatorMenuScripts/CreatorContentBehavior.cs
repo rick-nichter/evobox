@@ -8,12 +8,14 @@ public class CreatorItem
 {
     public string name;
     public Sprite icon;
+    public int cost; 
     public GameObject prefab;
 
-    public CreatorItem(string name, Sprite icon, GameObject prefab)
+    public CreatorItem(string name, Sprite icon, int cost, GameObject prefab)
     {
         this.name = name;
         this.icon = icon;
+        this.cost = cost; 
         this.prefab = prefab;
     }
 }
