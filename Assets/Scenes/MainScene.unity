@@ -2228,7 +2228,8 @@ MonoBehaviour:
     It may be other animals, or it may be plants.  The animals will die if they are
     unable to eat and this will impact your score negatively. \n\n- Animal behaviors
     such as eating provide you more coins, so it is a good idea to begin by adding
-    enough food sources.  "
+    enough food sources.  \n\n- You can use the mouse wheel to zoom the camera in
+    and out.  "
 --- !u!222 &438123951
 CanvasRenderer:
   m_ObjectHideFlags: 0
