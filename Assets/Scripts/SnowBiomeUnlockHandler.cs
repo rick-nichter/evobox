@@ -20,8 +20,8 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
     {
         if (!snowUnlocked)
         {
-            if (GameObject.FindGameObjectsWithTag("Wolf").Length >= 10
-                && GameObject.FindGameObjectsWithTag("Deer").Length >= 10)
+            if (GameObject.FindGameObjectsWithTag("Wolf").Length >= 1
+                && GameObject.FindGameObjectsWithTag("Deer").Length >= 1)
             {
                 info.SetActive(false);
                 Unlock.SetActive(true);
@@ -48,7 +48,8 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         mainBiomeArrow.SetActive(true);
         // TODO make this lerp nicely
         Camera.main.transform.position = snowCameraPos.position;
-        Camera.main.transform.rotation = snowCameraPos.rotation; 
+        Camera.main.transform.rotation = snowCameraPos.rotation;
+        Camera.main.GetComponent<CameraZoom>().UpdateCameraStartPosition(snowCameraPos.position);
     }
 
     public void onMainBiomeArrowClick()
@@ -56,6 +57,7 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         snowBiomeArrow.SetActive(true);
         mainBiomeArrow.SetActive(false);
         Camera.main.transform.position = mainCameraPos.position;
-        Camera.main.transform.rotation = mainCameraPos.rotation;     
+        Camera.main.transform.rotation = mainCameraPos.rotation;
+        Camera.main.GetComponent<CameraZoom>().UpdateCameraStartPosition(mainCameraPos.position);
     }
 }
