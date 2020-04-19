@@ -38,15 +38,20 @@ public class HerbivoreBehavior : AnimalBehavior
             else
             {
                 // move toward the food
-                animalBody.LookAt(currentFood.transform);
-                animalBody.position = Vector3.MoveTowards(animalBody.position, currentFood.transform.position, searchSpeed * Time.fixedDeltaTime);
+                // INFO: this fixes minor bug where animal moves into the ground when approaching plant (kind of hacky)
+                float adjustmentHeight = (animalCollider.size.y * animalBody.localScale.y) / 2;
+                Vector3 foodLocation = new Vector3(currentFood.transform.position.x, currentFood.transform.position.y + adjustmentHeight, 
+                    currentFood.transform.position.z);
+                animalBody.LookAt(foodLocation);
+                animalBody.position = Vector3.MoveTowards(animalBody.position, foodLocation, searchSpeed * Time.fixedDeltaTime);
+                // animalBody.position += animalBody.forward * searchSpeed * Time.fixedDeltaTime;
             }
         }
 
     }
 
     // When this herbivore collides with its food, the food should get eaten
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         PlantBehavior plant = collision.gameObject.GetComponent<PlantBehavior>();
 

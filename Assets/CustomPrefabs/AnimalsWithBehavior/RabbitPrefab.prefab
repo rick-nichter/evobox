@@ -163,6 +163,9 @@ MonoBehaviour:
   currentFood: {fileID: 0}
   hungerPoints: 3
   hunger: {fileID: 0}
+  animalCollider: {fileID: 0}
+  hungerTimer: 10
+  coinsOnEat: 2
 --- !u!1 &3640687096969667901
 GameObject:
   m_ObjectHideFlags: 0

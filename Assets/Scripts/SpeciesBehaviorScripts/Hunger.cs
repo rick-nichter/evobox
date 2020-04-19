@@ -5,9 +5,10 @@ using UnityEngine;
 public class Hunger : MonoBehaviour
 {
     public int hungerPoints = 10;
+    public float hungerTimer;
+    public int coinsOnEat;
 
     private int maxHungerPoints;
-    
     
     private ScoreHandler scoreHandler;
     private CoinHandler coinHandler;
@@ -21,8 +22,8 @@ public class Hunger : MonoBehaviour
     void Start()
     {
         maxHungerPoints = hungerPoints; 
-        // Every 10 seconds there is a 1 in 10 chance to be hungry. 
-        InvokeRepeating(nameof(loseHungerPoint), 5f, 10f);
+        // Every hungerTimer seconds there is a 1 in 10 chance to be hungry. 
+        InvokeRepeating(nameof(loseHungerPoint), 5f, hungerTimer);
     }
 
     // 1 in 10 chance to lose a hunger point.  This function should be called on delay
@@ -61,7 +62,7 @@ public class Hunger : MonoBehaviour
         }
         
         // A reward for good game play -> providing food for your animals
-        coinHandler.updateCoins(2);
+        coinHandler.updateCoins(coinsOnEat);
     }
 
     void Die()

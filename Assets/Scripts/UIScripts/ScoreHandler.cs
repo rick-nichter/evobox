@@ -10,16 +10,17 @@ public class ScoreHandler : MonoBehaviour
     public Text scoreTextObject;
     public Text highScoreText;
     public Hashtable animalScoreValues = new Hashtable();
+    
     void Start()
     {
         highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
         score = 0;
         scoreTextObject.text = score.ToString();
-        animalScoreValues.Add("Deer", 3);
+        animalScoreValues.Add("Deer", 4);
         animalScoreValues.Add("Wolf", 5);
-        animalScoreValues.Add("Rabbit", 2);
-        animalScoreValues.Add("Bear", 5);
-        InvokeRepeating("UpdateScore", 15, 30);
+        animalScoreValues.Add("Rabbit", 3);
+        animalScoreValues.Add("Bear", 7);
+        InvokeRepeating("UpdateScore", 10, 10);
     }
 
 

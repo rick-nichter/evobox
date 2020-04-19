@@ -12,6 +12,7 @@ TagManager:
   - Plant
   - Bear
   - Score
+  - Berry
   layers:
   - Default
   - TransparentFX

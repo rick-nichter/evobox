@@ -5,7 +5,7 @@ using UnityEngine;
 public class PredatorBehavior : AnimalBehavior
 {
     // When this predator collides with a prey, it should eat it (destroy the instance of prey)
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (hunger.isHungry() && foodList.Contains(collision.gameObject.tag))
         {

@@ -109,12 +109,15 @@ MonoBehaviour:
   animalBody: {fileID: 3941766332529787640}
   maxSpeed: 0
   foodList:
-  - Bush
+  - Berry
   searchRadius: 5
   searchSpeed: 2
   currentFood: {fileID: 0}
   hungerPoints: 5
   hunger: {fileID: 0}
+  animalCollider: {fileID: 0}
+  hungerTimer: 6
+  coinsOnEat: 3
 --- !u!1 &2092701363484065881
 GameObject:
   m_ObjectHideFlags: 0
