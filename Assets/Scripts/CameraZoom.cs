@@ -49,4 +49,9 @@ public class CameraZoom : MonoBehaviour
             mainCamera.transform.position = newCameraPos;
         }
     }
+
+    public void UpdateCameraStartPosition(Vector3 newPos)
+    {
+        cameraStartPosition = newPos;
+    }
 }
