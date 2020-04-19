@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace UnlockAnimalsScripts
 {
@@ -7,7 +8,9 @@ namespace UnlockAnimalsScripts
 
         public GameObject animalUnlockCanvas;
         public GameObject creatorMenu;
-       
+        public Text xpText; 
+
+        private int xp; 
 
         void Update()
         {
@@ -21,6 +24,23 @@ namespace UnlockAnimalsScripts
                 animalUnlockCanvas.SetActive(false);
                 creatorMenu.SetActive(true);
             }
+        }
+
+        public void addXP()
+        {
+            xp++;
+            xpText.text = "Available XP = " + xp; 
+        }
+
+        public int getXP()
+        {
+            return xp; 
+        }
+
+        public void spendXP(int cost)
+        {
+            xp -= cost; 
+            xpText.text = "Available XP = " + xp; 
         }
     }
 }

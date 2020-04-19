@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnlockAnimalsScripts;
 
 
 public class ScoreHandler : MonoBehaviour
@@ -10,7 +11,16 @@ public class ScoreHandler : MonoBehaviour
     public Text scoreTextObject;
     public Text highScoreText;
     public Hashtable animalScoreValues = new Hashtable();
-    
+
+    private int addXP = 0;
+
+    private AnimalTreeHandler animalTreeHandler;
+
+    private void Awake()
+    {
+        animalTreeHandler = FindObjectOfType<AnimalTreeHandler>();
+    }
+
     void Start()
     {
         highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
@@ -26,6 +36,18 @@ public class ScoreHandler : MonoBehaviour
 
     public void changeScore(int deltaScore)
     {
+        // For every 10 score the user earns reward 1 xp.  XP can't be lost only spent. 
+        if (deltaScore > 0)
+        {
+            addXP += deltaScore;
+            if (addXP >= 10)
+            {
+                animalTreeHandler.addXP();
+                addXP -= 10; 
+            }
+        }
+        
+        
         score += deltaScore;
       
         //don't allow negative score after score decrements on animal death
