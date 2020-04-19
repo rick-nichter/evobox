@@ -367,6 +367,9 @@ MonoBehaviour:
   currentFood: {fileID: 0}
   hungerPoints: 5
   hunger: {fileID: 0}
+  animalCollider: {fileID: 0}
+  hungerTimer: 8
+  coinsOnEat: 4
 --- !u!54 &6473536235005914706
 Rigidbody:
   m_ObjectHideFlags: 0

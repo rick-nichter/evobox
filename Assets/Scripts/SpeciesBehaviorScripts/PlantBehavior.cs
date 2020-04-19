@@ -14,12 +14,14 @@ public class PlantBehavior : MonoBehaviour
     public PlantSize size;
     private float timeSinceGrowth;
 
-    private int maxTimesToBeEaten; 
+    private int maxTimesToBeEaten;
+    private Vector3 startScale;
     
     void Start()
     {
         size = PlantSize.Sprout;
         timeSinceGrowth = 0f;
+        startScale = gameObject.transform.localScale;
         maxTimesToBeEaten = Random.Range(5, 25);
     }
 
@@ -45,7 +47,7 @@ public class PlantBehavior : MonoBehaviour
         if (timeSinceGrowth >= growthTime)
         {
             size += 1;
-            gameObject.transform.localScale *= 2;
+            gameObject.transform.localScale *= 1.5f;
 
             // reset timer
             timeSinceGrowth = 0f;
@@ -56,7 +58,7 @@ public class PlantBehavior : MonoBehaviour
     public void GetEaten()
     {
         size = PlantSize.Sprout;
-        gameObject.transform.localScale /= 4;
+        gameObject.transform.localScale = startScale;
         maxTimesToBeEaten--;
     }
 }

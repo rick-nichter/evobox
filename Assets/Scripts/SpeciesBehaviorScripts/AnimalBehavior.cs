@@ -14,6 +14,9 @@ public class AnimalBehavior : MonoBehaviour
     public GameObject currentFood;
     public int hungerPoints;
     public Hunger hunger;
+    public BoxCollider animalCollider;
+    public float hungerTimer;
+    public int coinsOnEat;
 
     private Vector3 spawnPosition;
     private float timeSinceDirectionChange;
@@ -35,7 +38,10 @@ public class AnimalBehavior : MonoBehaviour
         gameObject.AddComponent<Hunger>();
         hunger = gameObject.GetComponent<Hunger>();
         hunger.hungerPoints = hungerPoints;
+        hunger.hungerTimer = hungerTimer;
+        hunger.coinsOnEat = coinsOnEat;
         SpecificStart();
+        animalCollider = GetComponent<BoxCollider>();
     }
 
     private void FixedUpdate()
