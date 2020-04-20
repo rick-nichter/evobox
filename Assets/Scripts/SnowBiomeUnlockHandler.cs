@@ -85,6 +85,7 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         mountainBiomeArrow.SetActive(false);
         Camera.main.transform.position = mainCameraPos.position;
         Camera.main.transform.rotation = mainCameraPos.rotation;
+        Camera.main.GetComponent<CameraZoom>().UpdateCameraStartPosition(mainCameraPos.position);
     }
 
     public void onSnowBiomeArrowClick_FromMain()
@@ -98,7 +99,8 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         mainBiomeArrow.SetActive(true);
         // TODO make this lerp nicely
         Camera.main.transform.position = snowCameraPos.position;
-        Camera.main.transform.rotation = snowCameraPos.rotation; 
+        Camera.main.transform.rotation = snowCameraPos.rotation;
+        Camera.main.GetComponent<CameraZoom>().UpdateCameraStartPosition(snowCameraPos.position);
     }
 
     public void onSnowBiomeArrowClick_fromMountain()
@@ -110,6 +112,7 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         // TODO make this lerp nicely
         Camera.main.transform.position = snowCameraPos.position;
         Camera.main.transform.rotation = snowCameraPos.rotation;
+        Camera.main.GetComponent<CameraZoom>().UpdateCameraStartPosition(snowCameraPos.position);
     }
 
 
@@ -122,5 +125,6 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         mountainBiomeArrow.SetActive(false);
         Camera.main.transform.position = mountainCameraPos.position;
         Camera.main.transform.rotation = mountainCameraPos.rotation;
+        Camera.main.GetComponent<CameraZoom>().UpdateCameraStartPosition(mountainCameraPos.position);
     }
 }
